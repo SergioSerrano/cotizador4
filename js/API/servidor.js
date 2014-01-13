@@ -319,14 +319,7 @@ function llena_tabla(objc, obj) {
 
 function exporta() {
 
-var comp=$('#Comprador').val();
-	alert(comp);
-	//doc.text(5,lineas,comp);
-	var agente=$('#agente').val();
-	alert(agente);
-	
-	var tel=$('#tel').val();
-	alert(tel);
+
 
 	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
 
@@ -347,7 +340,7 @@ function success3(parent) {
 
 function success2(parent) {
 	parent.getParent(success3, fail);
-	alert(parent.name);
+	
 }
 
 
@@ -362,7 +355,7 @@ function gotFS(fileSystem) {
 }
 
 function gotFileEntry(fileEntry) {
-	alert(fileEntry.name);
+	
 
 	fileEntry.createWriter(gotFileWriter, fail);
 
@@ -373,10 +366,7 @@ function gotFileEntry(fileEntry) {
 }
 
 function success(entries) {
-	var i;
-	for (i = 0; i < entries.length; i++) {
-		alert(entries[i].name);
-	}
+	alert("SE GUARDO CORRECTAMENTE");
 }
 
 function fail(error) {
