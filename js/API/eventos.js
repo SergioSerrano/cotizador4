@@ -39,6 +39,7 @@ $(document).ready(function (e) {
 		});
 
 		$("#search-2").live( "change", function(event, ui) {
+			alert("hola");
 			var $input = $( this );
   			var $ul=$("#autocomplete"),
 			
